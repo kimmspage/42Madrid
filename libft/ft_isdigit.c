@@ -6,13 +6,11 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:52:19 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/09/29 20:52:08 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/15 01:56:06 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <libft.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_isdigit(int c)
     

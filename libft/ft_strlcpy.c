@@ -6,12 +6,22 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:43 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/09/30 01:15:37 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/15 01:56:19 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+
+
+
+
+
+
+
+
+
+
+
 
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
