@@ -6,14 +6,14 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:52:19 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/15 01:56:06 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 01:37:08 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int ft_isdigit(int c)
-    
+
 {
     return (c >=0 && c<= 127);
 }
