@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:29:19 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 02:05:52 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 14:38:20 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	**ft_split(char const *s, char c)
 	char **res;
 	int	i;
 
-	res = ft_split("hello!", ' ');
+	res = ft_split("holis", ' ');
 	while(res[i])
 	{
 		printf("%s \n",res[i++]);

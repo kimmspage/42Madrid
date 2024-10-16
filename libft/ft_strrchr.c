@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:54 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 04:05:06 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 14:38:10 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main(void)
     char c = 'o';
 
     char *result = ft_strrchr(str, c);
-    printf("Última ocurrencia de '%c': %s\n", c, result ? result : "false");
+    printf("%c': %s\n", c, result ? result : "false");
 
     return 0;
 }

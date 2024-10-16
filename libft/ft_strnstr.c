@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:50 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 04:05:07 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 14:38:09 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 int main(void)
 {
-    char haystack[] = "Hola, mundo!";
-    char needle[] = "mun";
+    char haystack[] = "cositas jeje!";
+    char needle[] = "itas";
 
     char *result = ft_strnstr(haystack, needle, 10);
 

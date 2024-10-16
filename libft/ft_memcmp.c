@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:52:30 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 04:12:35 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 14:38:22 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,10 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int main(void)
 {
-    const char str1[] = "Hola, mundo!";
-    const char str2[] = "Hola, todos!";
-    size_t n = 5;  // Comparar los primeros 5 bytes
+    char str1[] = "hey";
+    char str2[] = "hoy";
 
-    // Comparar los bloques de memoria
-    int result = ft_memcmp(str1, str2, n);
+    printf("%d/n", ft_memcmp(str1, str2, 4));
 
-    // Mostrar el resultado
-    if (result == 0)
-        printf("Los primeros %zu bytes son iguales.\n", n);
-    else
-        printf("Los primeros %zu bytes son diferentes.\n", n);
-
-    return 0;
+return 0;
 }

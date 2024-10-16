@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 20:53:29 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 01:37:06 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 14:38:29 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 
 int main(void)
 {
-    printf("%d\n", ft_atoi("5"));
+    printf("%d\n", ft_atoi("7"));
   
     return 0;
 }

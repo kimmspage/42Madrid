@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:40 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 04:05:04 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 14:38:12 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int main(void)
     char dst[20] = "hey";        
     const char *src = "personita";  
 
-    // Concatenamos src a dst
     size_t result = ft_strlcat(dst, src, sizeof(dst));
 
     printf("conecxión: %s\n", dst);
