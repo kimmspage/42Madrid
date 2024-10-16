@@ -6,7 +6,13 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:29:05 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 01:36:43 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 04:12:42 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

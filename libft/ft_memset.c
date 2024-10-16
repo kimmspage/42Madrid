@@ -21,8 +21,13 @@ void *ft_memset(void *s, int c, size_t n)
     return s;
 }
 
-int main()
+int main(void)
 {
-
+    char str[10] = "hey";
     
+    ft_memset(str, 'X', 3);
+
+    printf("new string: %s\n", str);
+
+    return 0;
 }
