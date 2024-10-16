@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:52:10 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 01:36:59 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 14:31:19 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int ft_isalpha(int c)
     return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
 
-/*
+
 int main()
 {
     int c = 'a';
@@ -26,5 +26,6 @@ int main()
         printf("false");
 }
 
+
 return 0;
-*/
+}
