@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:45 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/15 01:56:22 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/16 02:05:34 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,11 @@ size_t ft_strlen(const char *s)
     return (len);
 }
 
-int main()
+int main(void)
 {
-
+    const char *str = "Hola";
     
+    printf("Length: %zu\n", ft_strlen(str));
+
+    return 0;
 }
