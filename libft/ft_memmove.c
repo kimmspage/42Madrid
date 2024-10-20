@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:30 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 04:12:33 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/17 18:03:58 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
+/*
 int main(void)
 {
     char str[20] = "holi corrector!"; 
@@ -49,4 +49,4 @@ int main(void)
     printf("new strng: %s\n", str); 
 
     return 0;
-}
+}*/

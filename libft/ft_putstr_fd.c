@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:29:17 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 02:05:54 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/20 00:38:04 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 

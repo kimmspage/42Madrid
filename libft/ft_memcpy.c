@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:52:46 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 14:38:21 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/19 23:46:43 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
+/*
 int main(void)
 {
     char src[] = "holi mundo!";
@@ -39,4 +39,4 @@ int main(void)
     printf("new str: %s\n", dst);
 
     return 0;
-}
+}*/

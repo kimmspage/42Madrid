@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 15:52:19 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/19 23:46:20 by kdungaya         ###   ########.fr       */
+/*   Created: 2024/10/16 01:29:36 by kimberlydun       #+#    #+#             */
+/*   Updated: 2024/10/19 23:48:16 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
-
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	return (c >= 48 && c <= 57);
-}
+	char	*dstr;
+	size_t	slen;
 
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_calloc(1, sizeof(char)));
+	if (len > slen - start)
+		len = slen - start;
+	dstr = malloc(len + 1);
+	if (!dstr)
+		return (NULL);
+	ft_strlcpy(dstr, s + start, len + 1);
+	return (dstr);
+}
 /*
 int	main(void)
 {
-	int	c;
+	char *c;
 
-	c = '9';
-	if (ft_isdigit(c)) {
-		printf("True");
-	} else {
-		printf("False");
-	}
-}
-*/
+	c = ft_substr("holis corazones!", 7, 5);
+	printf("%s\n", c);
+	free(c);
+
+	return (0);
+}*/

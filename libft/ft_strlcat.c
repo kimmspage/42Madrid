@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:40 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 14:38:12 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/19 23:47:21 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (l);
 }
-
+/*
 int main(void)
 {
     char dst[20] = "hey";        
@@ -43,4 +43,4 @@ int main(void)
     printf("total len: %zu\n", result);
 
     return 0;
-}
+}*/

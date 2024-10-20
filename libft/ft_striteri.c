@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:29:23 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 02:05:43 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/20 00:40:23 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

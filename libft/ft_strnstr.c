@@ -3,42 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:50 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 14:38:09 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/20 00:50:30 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t i;
-    size_t j;
+	size_t	i;
+	size_t	j;
 
-    if (*needle == '\0')
-        return (char *)haystack;
-
-    for (i = 0; i < len && haystack[i]; i++)
-    {
-        j = 0;
-        while (haystack[i + j] && needle[j] && (i + j) < len && haystack[i + j] == needle[j])
-            j++;
-        if (!needle[j])
-            return (char *)(haystack + i);
-    }
-    return NULL;
+	if (*needle == '\0')
+		return ((char *)haystack);
+	i = 0;
+	while (i < len && haystack[i])
+	{
+		j = 0;
+		while (haystack[i + j] && needle[j] && haystack[i + j] == needle[j] && i
+			+ j < len)
+			j++;
+		if (!needle[j])
+			return ((char *)(haystack + i));
+		i++;
+	}
+	return (NULL);
 }
-
-int main(void)
+/*
+int	main(void)
 {
-    char haystack[] = "cositas jeje!";
-    char needle[] = "itas";
+	char	haystack[] = "cositas jeje!";
+	char	needle[] = "itas";
+	char	*result;
 
-    char *result = ft_strnstr(haystack, needle, 10);
-
-    printf("%s\n", result ? result : "false");
-
-    return 0;
+	result = ft_strnstr(haystack, needle, 10);
+	printf("%s\n", result ? result : "false");
+	return (0);
 }
+*/

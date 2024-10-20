@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:29:29 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 02:05:39 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/20 00:40:38 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

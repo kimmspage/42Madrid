@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:52:05 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 01:37:02 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/19 23:44:10 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:29:19 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 14:38:20 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/19 23:47:07 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

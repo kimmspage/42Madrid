@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 01:29:14 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 02:05:56 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/20 00:14:50 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:54:00 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 14:38:26 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/19 23:47:43 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-int main(void)
+/*
+int	main(void)
 {
-   
-    printf("'%c' MAS '%c'\n", 'b', ft_toupper('b'));
-
-    return 0;
+	printf("'%c' MAS '%c'\n", 'b', ft_toupper('b'));
+	return (0);
 }
+*/

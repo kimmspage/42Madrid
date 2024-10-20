@@ -3,28 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:53:56 by kimberlydun       #+#    #+#             */
-/*   Updated: 2024/10/16 14:38:25 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2024/10/19 23:48:28 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90) 
-        c += 32;            
-    return (c);            
-    
-
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }
-
-int main(void)
+/*
+int	main(void)
 {
-   
-    printf("'%c' min'%c'\n", 'B', ft_tolower('B'));
-    
-    return 0;
-}
+
+	printf("'%c' min'%c'\n", 'B', ft_tolower('B'));
+
+	return (0);
+}*/
