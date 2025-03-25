@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:36:12 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/19 00:28:27 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/25 20:14:27 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int ft_putunbr(unsigned int n)
 }
 
 /* Función auxiliar para imprimir en base hexadecimal */
-int ft_puthex(unsigned int n, char format)
+int ft_puthex(unsigned long n, char format)
 {
     int len = 0;
     char *hex = (format == 'x') ? "0123456789abcdef" : "0123456789ABCDEF";
