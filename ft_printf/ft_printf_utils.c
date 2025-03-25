@@ -6,19 +6,19 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:36:12 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/25 20:14:27 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/25 20:49:25 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/* Función auxiliar para imprimir un solo carácter */
+/*Auxiliar de Carácter*/
 int ft_putchar(char c)
 {
     return (write(1, &c, 1));
 }
 
-/* Función auxiliar para imprimir una cadena */
+/* Auxiliar cadena */
 int ft_putstr(char *s)
 {
     int len = 0;
@@ -30,7 +30,7 @@ int ft_putstr(char *s)
     return (len);
 }
 
-/* Función auxiliar para imprimir un número en base 10 */
+/* Auxiliar número en base 10 */
 int ft_putnbr(int n)
 {
     int len = 0;
@@ -50,7 +50,7 @@ int ft_putnbr(int n)
     return (len);
 }
 
-/* Función auxiliar para imprimir un número sin signo en base 10 */
+/* Auxiliar para número sin signo en base 10 */
 int ft_putunbr(unsigned int n)
 {
     int len = 0;
@@ -63,7 +63,7 @@ int ft_putunbr(unsigned int n)
     return (len);
 }
 
-/* Función auxiliar para imprimir en base hexadecimal */
+/* Auxiliar en base hexadecimal */
 int ft_puthex(unsigned long n, char format)
 {
     int len = 0;
@@ -75,7 +75,7 @@ int ft_puthex(unsigned long n, char format)
     return (len);
 }
 
-/* Función auxiliar para imprimir punteros en hexadecimal */
+/* Auxiliar punteros en hexadecimal */
 int ft_putptr(void *ptr)
 {
     unsigned long addr = (unsigned long)ptr;

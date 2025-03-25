@@ -6,13 +6,13 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:07:14 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/19 00:10:32 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/25 20:49:16 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/* Manejo de los especificadores de formato */
+/* Manejo especificadores (Corrected Javi) */
 int ft_process_format(va_list args, char format)
 {
     if (format == 'c')
