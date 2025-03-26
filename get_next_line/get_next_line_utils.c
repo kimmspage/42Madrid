@@ -6,89 +6,83 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 20:51:39 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/26 13:44:47 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/26 14:54:35 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-// Crea un nuevo nodo con el contenido dado
-t_line	*ft_lstnew(char *content)
+size_t	ft_strlen(const char *str)
 {
-	t_line	*new_node;
+	size_t	i;
 
-	new_node = (t_line *)malloc(sizeof(t_line));
-	if (!new_node)
-		return (NULL);
-	new_node->content = content;
-	new_node->length = 0;
-	new_node->next = NULL;
-	return (new_node);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-// Devuelve el último nodo de la lista
-t_line	*ft_lstlast(t_line *lst)
+char	*ft_strdup(const char *s1)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
-}
+	char	*copy;
+	size_t	i;
 
-// Añade un nuevo nodo al final de la lista
-void	ft_lstadd_back(t_line **lst, t_line *new)
-{
-	t_line	*temp;
-
-	if (!new)
-		return ;
-	if (!*lst)
-	{
-		*lst = new;
-		return ;
-	}
-	temp = ft_lstlast(*lst);
-	temp->next = new;
-}
-
-// Limpia la lista y libera toda la memoria
-void	ft_lstclear(t_line **lst)
-{
-	t_line	*temp_lst;
-
-	if (!lst)
-		return ;
-	while (*lst != NULL)
-	{
-		temp_lst = *lst;
-		*lst = (*lst)->next;
-		free(temp_lst->content);
-		free(temp_lst);
-	}
-	*lst = NULL;
-}
-
-// Función de asignación de memoria, inicializa todo a 0
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void			*arr;
-	size_t			alloc_size;
-	size_t			i;
-	unsigned char	*cast_s;
-
-	alloc_size = nmemb * size;
-	if (!alloc_size || alloc_size / nmemb != size)
-		return (NULL);
-	arr = malloc(alloc_size);
-	if (arr == NULL)
+	copy = (char *)malloc(ft_strlen(s1) + 1);
+	if (!copy)
 		return (NULL);
 	i = 0;
-	cast_s = arr;
-	while (i < alloc_size)
+	while (s1[i])
 	{
-		cast_s[i] = '\0';
+		copy[i] = s1[i];
 		i++;
 	}
-	return (cast_s);
+	copy[i] = '\0';
+	return (copy);
+}
+
+char	*ft_substr(char *s, size_t start, size_t len)
+{
+	char	*substr;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	substr = (char *)malloc(len + 1);
+	if (!substr)
+		return (NULL);
+	i = 0;
+	while (i < len)
+		substr[i++] = s[start++];
+	substr[i] = '\0';
+	return (substr);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*joined;
+	size_t	i;
+	size_t	j;
+
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
+	joined = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!joined)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		joined[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j])
+		joined[i++] = s2[j++];
+	joined[i] = '\0';
+	return (joined);
 }
