@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 20:51:39 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/26 13:24:21 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/26 13:44:47 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ft_lstclear(t_line **lst)
 		*lst = (*lst)->next;
 		free(temp_lst->content);
 		free(temp_lst);
-	} 
+	}
 	*lst = NULL;
 }
 
