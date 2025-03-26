@@ -26,3 +26,4 @@ char    *gnl_strchr(const char *s, int c);
 size_t  gnl_strlen(const char *s);
 
 #endif
+ 
