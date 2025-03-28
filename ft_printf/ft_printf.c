@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:07:14 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/28 00:48:13 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/28 01:22:34 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_process_format(va_list args, char format)
 		len = 0;
 		addr = (unsigned long)va_arg(args, void *);
 		len += ft_putstr("0x");
-		len += len + ft_puthex(addr, 'x');
+		len += ft_puthex(addr, 'x');
 		return (len);
 	}
 	else if (format == '%')

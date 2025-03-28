@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:36:12 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/27 16:25:41 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/28 01:22:36 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_putstr(char *s)
 
 	len = 0;
 	if (!s)
-		s = "(null)";
+		return (write(1, "(null)", 6));
 	while (*s)
 		len += ft_putchar(*s++);
 	return (len);
