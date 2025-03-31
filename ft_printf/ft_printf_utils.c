@@ -6,79 +6,61 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:36:12 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/28 01:22:36 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/31 09:00:34 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /*Auxiliar de Carácter*/
-int	ft_putchar(char c)
+int	ft_putchar(char c, size_t *count)
 {
 	return (write(1, &c, 1));
+	(*count)++;
 }
 
 /* Auxiliar cadena */
-int	ft_putstr(char *s)
+int	ft_putstr(char *str, size_t *count)
 {
-	int	len;
-
-	len = 0;
-	if (!s)
-		return (write(1, "(null)", 6));
-	while (*s)
-		len += ft_putchar(*s++);
-	return (len);
+	if (!str)
+		str = "(null)";
+	while (*str)
+	{
+		ft_putchar(*str, count);
+		str++
+	}
 }
 
 /* Auxiliar número en base 10 */
-int	ft_putnbr(int n)
+int	ft_putnbr(int n, size_t *count)
 {
-	int		len;
-	char	c;
-
-	len = 0;
 	if (n == -2147483648)
-		return (ft_putstr("-2147483648"));
+	{
+		ft_putstr("-2147483648", count);
+		return ;
+	}
 	if (n < 0)
 	{
-		len += ft_putchar('-');
+		ft_putchar('-', count);
 		n = -n;
 	}
-	if (n > 9)
-		len += ft_putnbr(n / 10);
-	c = (n % 10) + '0';
-	len += ft_putchar(c);
-	return (len);
+	if (n >= 10)
+		ft_putnbr(n / 10, count);
+	ft_putchar(('0' + n % 10), count);
 }
 
 /* Auxiliar para número sin signo en base 10 */
-int	ft_putunbr(unsigned int n)
+int	ft_putunbr(unsigned int n, size_t *count)
 {
-	int		len;
-	char	c;
-
-	len = 0;
-	if (n > 9)
-		len += ft_putunbr(n / 10);
-	c = (n % 10) + '0';
-	len += ft_putchar(c);
-	return (len);
+	if (n >= 10)
+		ft_putunbr(n / 10, count);
+	ft_putchar((n % 10 + '0', count));
 }
 
 /* Auxiliar en base hexadecimal */
-int	ft_puthex(unsigned long n, char format)
+int	ft_puthex(unsigned int n, size_t *count, char *base)
 {
-	int		len;
-	char	*hex;
-
-	len = 0;
-	if (format == 'x')
-		hex = "0123456789abcdef";
-	else
-		hex = "0123456789ABCDEF";
-	if (n > 15)
-		len += ft_puthex(n / 16, format);
-	len += ft_putchar(hex[n % 16]);
-	return (len);
+	if (n >=16)
+	ft_puthex(n / 16, count, base);
+	ft_putchar(base[n % 16], count);
 }
