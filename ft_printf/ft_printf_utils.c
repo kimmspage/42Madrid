@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:36:12 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/31 10:53:27 by kdungaya         ###   ########.fr       */
+/*   Updated: 2025/03/31 11:11:23 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,26 @@ int	ft_putstr(char *str, size_t *count)
 }
 
 /* Auxiliar número en base 10 */
-int	ft_putnbr(int n, size_t *count)
+int ft_putnbr(int n, size_t *count)
 {
-	if (n == -2147483648)
-	{
-		ft_putstr("-2147483648", count);
-		return ;
-	}
-	if (n < 0)
-	{
-		ft_putchar('-', count);
-		n = -n;
-	}
-	if (n >= 10)
-		ft_putnbr(n / 10, count);
-	ft_putchar(('0' + n % 10), count);
+    if (n == -2147483648)
+    {
+        ft_putstr("-2147483648", count);
+        return (11); /*Length of "-2147483648"*/
+    }
+    if (n < 0)
+    {
+        ft_putchar('-', count);
+        n = -n;
+        return (1 + ft_putnbr(n, count));
+    }
+    if (n >= 10)
+    {
+        ft_putnbr(n / 10, count);
+        ft_putchar('0' + n % 10, count);
+        return (1 + ft_putnbr(n / 10, count));
+    }
+    return (ft_putchar('0' + n, count));
 }
 
 /* Auxiliar para número sin signo en base 10 */
