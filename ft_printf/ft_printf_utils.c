@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
+/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:36:12 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/31 09:00:34 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/03/31 10:53:27 by kdungaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_putstr(char *str, size_t *count)
 	while (*str)
 	{
 		ft_putchar(*str, count);
-		str++
+		str++;
 	}
 }
 
@@ -54,7 +54,7 @@ int	ft_putunbr(unsigned int n, size_t *count)
 {
 	if (n >= 10)
 		ft_putunbr(n / 10, count);
-	ft_putchar((n % 10 + '0', count));
+	ft_putchar(n % 10 + '0', count);
 }
 
 /* Auxiliar en base hexadecimal */
