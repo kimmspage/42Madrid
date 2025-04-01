@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:07:14 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/31 10:27:10 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/04/01 23:20:13 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,8 @@ int	ft_process_format(va_list args, char format, size_t *count)
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int		len;
 	size_t	count;
 
-	len = 0;
 	count = 0;
 	va_start(args, format);
 	while (*format)
@@ -57,12 +55,12 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			len += ft_process_format(args, *format, &count);
+			ft_process_format(args, *format, &count);
 		}
 		else
-			len += ft_putchar(*format, &count);
+			ft_putchar(*format, &count);
 		format++;
 	}
 	va_end(args);
-	return (len);
+	return ((int)count);
 }

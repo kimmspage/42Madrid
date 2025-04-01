@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdungaya <kdungaya@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:14:11 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/31 10:52:42 by kdungaya         ###   ########.fr       */
+/*   Updated: 2025/04/01 23:20:16 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
