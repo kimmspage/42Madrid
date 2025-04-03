@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:36:12 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/04/02 01:32:11 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/04/03 12:05:29 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int	ft_putstr(char *str, size_t *count)
 		if (ft_putchar(*str++, count) == -1)
 			return (-1);
 	}
-	return (*count);
+	return (1);
 }

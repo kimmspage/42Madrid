@@ -6,25 +6,11 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:07:14 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/04/02 01:33:16 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/04/03 12:06:41 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
-#include <stddef.h>
-
-/* Manejo de especificadores hexadecimales */
-static int	handle_hex(va_list args, char format, size_t *count)
-{
-	char	*base;
-
-	if (format == 'x')
-		base = "0123456789abcdef";
-	else
-		base = "0123456789ABCDEF";
-	return (ft_puthex(va_arg(args, unsigned int), count, base));
-}
 
 /* Manejo de todos los especificadores */
 int	ft_process_format(va_list args, char format, size_t *count)
@@ -39,8 +25,12 @@ int	ft_process_format(va_list args, char format, size_t *count)
 		return (ft_putunbr(va_arg(args, unsigned int), count));
 	if (format == 'p')
 		return (ft_putptr(va_arg(args, void *), count));
-	if (format == 'x' || format == 'X')
-		return (handle_hex(args, format, count));
+	if (format == 'x')
+		return (ft_puthex(va_arg(args, unsigned int), count,
+				"0123456789abcdef"));
+	if (format == 'X')
+		return (ft_puthex(va_arg(args, unsigned int), count,
+				"0123456789ABCDEF"));
 	if (format == '%')
 		return (ft_putchar('%', count));
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 17:31:14 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/28 17:57:04 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/04/02 13:17:56 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int main(void)
     pruebita("Unsigned máximo + 1: %u\n", 4294967296U);
     pruebita("Hexadecimal de número negativo: %x\n", -42);
     pruebita("Puntero NULL: %p\n", NULL);
-    pruebita("Cadena larga: %s\n", "Esta es una cadena extremadamente larga para probar el manejo de cadenas extensas en la función ft_printf...");
+    pruebita("Cadena larga: %s\n", "Holis Corrector. Que ganas de tirarme de un coche en movimiento. ODIO programar.");
 
     return (0);
 }
