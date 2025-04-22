@@ -23,7 +23,7 @@ void comparar_resultados(const char* descripcion, const char* formato, ...) {
     va_end(args);
 
     va_start(args, formato);
-    printf_len = vprintf(formato, args);
+    printf_len = printf(formato, args);
     va_end(args);
 
     printf("%s - ft_printf len: %d, printf len: %d\n", descripcion, ft_len, printf_len);
