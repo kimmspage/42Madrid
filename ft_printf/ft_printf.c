@@ -24,7 +24,7 @@ int	ft_process_format(va_list args, char format, size_t *count)
 	if (format == 'u')
 		return (ft_putunbr(va_arg(args, unsigned int), count));
 	if (format == 'p')
-		return (ft_putptr(va_arg(args, void *), count));
+		return (ft_putptr(va_arg(args, unsigned long long), count));
 	if (format == 'x')
 		return (ft_puthex(va_arg(args, unsigned int), count,
 				"0123456789abcdef"));

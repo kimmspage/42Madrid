@@ -12,17 +12,38 @@
 
 #include "ft_printf.h"
 
-/* Auxiliar para imprimir punteros */
-int	ft_putptr(void *ptr, size_t *count)
+/* Auxiliar en base hexadecimal con formato long long */
+int	ft_puthex_ptr(unsigned long long n, size_t *count)
 {
-	unsigned long	address;
+	if (n >= 16)
+	{
+		ft_puthex_ptr(n / 16, count);
+		ft_puthex_ptr(n % 16, count);
+	}
+	else
+	{
+		if (n < 10)
+		{
+			if (ft_putchar(n + '0', count) == -1)
+				return (-1);
+		}
+		else
+		{
+			if (ft_putchar(n - 10 + 'a', count) == -1)
+				return (-1);
+		}
+	}
+	return (0);
+}
 
+/* Auxiliar para imprimir punteros */
+int	ft_putptr(unsigned long long ptr, size_t *count)
+{
 	if (!ptr)
 		return (ft_putstr("(nil)", count));
-	address = (unsigned long)ptr;
 	if (ft_putstr("0x", count) == -1)
 		return (-1);
-	if (ft_puthex(address, count, "0123456789abcdef") == -1)
+	if (ft_puthex_ptr(ptr, count) == -1)
 		return (-1);
 	return (0);
 }
