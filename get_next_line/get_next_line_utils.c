@@ -6,83 +6,75 @@
 /*   By: kimberlydungaya <kimberlydungaya@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 20:51:39 by kimberlydun       #+#    #+#             */
-/*   Updated: 2025/03/26 15:09:37 by kimberlydun      ###   ########.fr       */
+/*   Updated: 2025/04/30 01:41:08 by kimberlydun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *str)
+int	found_newline(t_list *stash)
 {
-	size_t	i;
+	int		i;
+	t_list	*tmp;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	tmp = stash;
+	while (tmp)
+	{
+		i = 0;
+		while (tmp->content[i])
+		{
+			if (tmp->content[i++] == '\n')
+				return (1);
+		}
+		tmp = tmp->next;
+	}
+	return (0);
 }
 
-char	*ft_strdup(const char *s1)
+t_list	*ft_lstlast(t_list *stash)
 {
-	char	*copy;
-	size_t	i;
+	t_list	*tmp;
 
-	copy = (char *)malloc(ft_strlen(s1) + 1);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	tmp = stash;
+	while (tmp && tmp->next)
+		tmp = tmp->next;
+	return (tmp);
+}
+
+void	free_stash(t_list *stash)
+{
+	t_list	*current;
+	t_list	*next;
+
+	current = stash;
+	while (current)
 	{
-		copy[i] = s1[i];
+		next = current->next;
+		free(current->content);
+		free(current);
+		current = next;
+	}
+}
+
+int	ft_strlen(const char *str)
+{
+	int	len;
+
+	len = 0;
+	while (str && str[len])
+		len++;
+	return (len);
+}
+
+void	ft_strlcpy(char *dst, char *src, int len)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] && i < len)
+	{
+		dst[i] = src[i];
 		i++;
 	}
-	copy[i] = '\0';
-	return (copy);
-}
-
-char	*ft_substr(char *s, size_t start, size_t len)
-{
-	char	*substr;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	substr = (char *)malloc(len + 1);
-	if (!substr)
-		return (NULL);
-	i = 0;
-	while (i < len)
-		substr[i++] = s[start++];
-	substr[i] = '\0';
-	return (substr);
-}
-
-char	*ft_strjoin(char *s1, char *s2)
-{
-	char	*joined;
-	size_t	i;
-	size_t	j;
-
-	if (!s1)
-		return (ft_strdup(s2));
-	if (!s2)
-		return (ft_strdup(s1));
-	joined = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!joined)
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		joined[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j])
-		joined[i++] = s2[j++];
-	joined[i] = '\0';
-	return (joined);
+	dst[i] = '\0';
 }
